@@ -1,3 +1,4 @@
+import ImageUpload from "@/component/image-upload";
 import { createClient } from "@/utils/supabase/server";
 import Image from "next/image";
 
@@ -11,6 +12,8 @@ export default async function Home() {
       {provinces.data?.map((province) => {
         return <div key={province.code}>{province.name}</div>;
       })}
+
+      <ImageUpload />
     </main>
   );
 }
